@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-
         <template id="product_barcode_report_template">
             <span t-foreach="get_label_data(data['form'])" t-as="l">
                 <div class="page" style="valign:center">
@@ -26,6 +25,5 @@
                 </div>
             </span>
         </template>
-
     </data>
 </odoo>

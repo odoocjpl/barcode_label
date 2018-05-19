@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-
         <!-- wizard -->
         <record model="ir.ui.view" id="view_small_barcode_label_form">
             <field name="name">small.barcode.label.form</field>
@@ -58,25 +57,14 @@
                         </page>
                     </notebook>
                     <footer>
-                        <button name="action_call_report" string="Print" type="object" class="oe_highlight"/>
-                        or
+                        <button name="action_call_report" string="Print" type="object" class="oe_highlight"/>                        or                        
                         <button string="Cancel" class="oe_link" special="cancel"/>
                     </footer>
                 </form>
             </field>
         </record>
-
-        <act_window id="action_small_barcode_label"
-            name="Dynamic Product Label"
-            src_model="product.product"
-            res_model="small.barcode.label"
-            view_type="form"
-            view_mode="form"
-            key2="client_print_multi"
-            target="new"/>
+        <act_window id="action_small_barcode_label" name="Dynamic Product Label" src_model="product.product" res_model="small.barcode.label" view_type="form" view_mode="form" key2="client_print_multi" target="new"/>
         <!-- wizard ends -->
-
-
         <record id="wizard_small_barcode_template_form_view" model="ir.ui.view">
             <field name="name">small.barcode.template.form</field>
             <field name="model">small.barcode.template</field>
@@ -86,15 +74,12 @@
                         <field name="name"/>
                     </group>
                     <footer>
-                        <button name="go_to_label_wizard" string="Save" type="object" class="oe_highlight"/>
-                            or
-                        <button name="close_wizard" string="Cancel" type="object" class="oe_link" 
-                            context="{'cancel_change' : True}" />
+                        <button name="go_to_label_wizard" string="Save" type="object" class="oe_highlight"/>                            or                        
+                        <button name="close_wizard" string="Cancel" type="object" class="oe_link" context="{'cancel_change' : True}" />
                     </footer>
                 </form>
             </field>
         </record>
-
         <record model="ir.ui.view" id="view_small_barcode_template_tree">
             <field name="name">small.barcode.template.form</field>
             <field name="model">small.barcode.template</field>
@@ -105,7 +90,6 @@
                 </tree>
             </field>
         </record>
-
         <record model="ir.ui.view" id="view_small_barcode_template_form">
             <field name="name">small.barcode.template.form</field>
             <field name="model">small.barcode.template</field>
@@ -146,7 +130,6 @@
                 </form>
             </field>
         </record>
-
         <record id="action_small_barcode_template" model="ir.actions.act_window">
             <field name="name">Product Label design</field>
             <field name="type">ir.actions.act_window</field>
@@ -154,14 +137,12 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
-
         <record id="action_small_barcode_template_tree" model="ir.actions.act_window.view">
             <field eval="0" name="sequence"/>
             <field name="view_mode">tree</field>
             <field name="view_id" ref="view_small_barcode_template_tree"/>
             <field name="act_window_id" ref="action_small_barcode_template"/>
         </record>
-
         <!-- child view first -->
         <record id="action_small_barcode_template_form" model="ir.actions.act_window.view">
             <field eval="1" name="sequence"/>
@@ -169,9 +150,6 @@
             <field name="view_id" ref="view_small_barcode_template_form"/>
             <field name="act_window_id" ref="action_small_barcode_template"/>
         </record>
-
-        <menuitem id="menuitem_small_barcode_template" parent="sales_team.menu_sales"
-                  action="action_small_barcode_template" sequence="100"/>
-
+        <menuitem id="menuitem_small_barcode_template" parent="sales_team.menu_sales" action="action_small_barcode_template" sequence="100"/>
     </data>
 </odoo>
