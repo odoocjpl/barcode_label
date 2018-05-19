@@ -1,0 +1,2 @@
+import small_barcode_label
+import product_barcode_report_templete

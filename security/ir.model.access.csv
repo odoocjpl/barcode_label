@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_small_barcode_template,access_small_barcode_template,model_small_barcode_template,base.group_user,1,1,1,1
+access_small_barcode_template_line,access_small_barcode_template_line,model_small_barcode_template_line,base.group_user,1,1,1,1
